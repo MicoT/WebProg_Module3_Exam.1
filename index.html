@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>EXAM_1</title>
+    <style>
+        .title_header{
+            text-align: center;
+            
+        }
+        .search-wrapper {
+            margin-top: 50px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .25rem;
+        }
+        input {
+            font-size: 2rem;
+            width: 50%;
+        }
+        .user-cards {
+            display: grid;
+            gap: .25rem;
+            margin-top: 1rem;
+            margin-left: 300px;
+            margin-right: 300px;
+            
+        }
+        .card {
+            border: 2px solid black;
+            background-color: white;
+            padding: .5rem;
+            text-align: center;
+        }
+
+        .card > .header {
+            font-size: 2.5rem;
+            margin-bottom: .25rem;
+        }
+
+        .card > .body {
+            margin-bottom: .25rem;
+            font-size: 1rem;
+            color: #777;
+        }
+        .card > .phone{
+            font-size: .8rem;
+            color: #777;
+        }
+        .card > .website{
+            font-size: .8rem;
+            color: #777;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="title_header">
+            <h1>USER SEARCHER</h1>
+            <h3>Instructions: You can use the search bar to search for any user! You can use any data the user has in the search bar and the search bar will finding the one with matching data.</h3>
+        </div>
+        <div class="search-wrapper">
+            <label for="search">Search Users</label>
+            <input type="search" id="search" search>
+        </div>
+        <div class="user-cards" user-cards-container></div>
+        <template user-template>
+            <div class="card">
+            <div class="header" data-header></div>
+            <div class="body" data-body></div>
+            <div class="phone" data-phone></div>
+            <div class="website" data-website></div>
+        </template>
+    </body>
+</html>
